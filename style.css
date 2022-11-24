@@ -1,0 +1,507 @@
+body {
+    display: block;
+    position: center;
+    font-family: 'Space Mono', monospace;
+    background-color: rgb(240, 244, 247);
+    background: linear-gradient(-70deg, #464646, #000000);
+    height: 100vh;
+
+}
+
+/* .box {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}  */
+.title {
+    color: #f09819;
+}
+
+/* Background circles start */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #209cff, #68e0cf);
+}
+
+.circles {
+    position: absolute;
+    height: 270px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.circle-1 {
+    height: 300px;
+    width: 300px;
+    top: 100px;
+    left: -50px;
+    opacity: 0.8;
+    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+    animation-iteration-count: infinite;
+    animation-name: float;
+    -webkit-animation-name: float;
+    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+    animation-direction: alternate;
+
+}
+
+.circle-2 {
+    height: 240px;
+    width: 240px;
+    bottom: 40px;
+    right: -100px;
+    opacity: 0.8;
+    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+    animation-iteration-count: infinite;
+    animation-name: float;
+    -webkit-animation-name: float;
+    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+/* Background circles end */
+
+/* ANIMATIONS */
+@keyframes explode {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+
+    0% {
+        -webkit-transform: rotateX(0deg) translateY(0px);
+        -moz-transform: rotateX(0deg) translateY(0px);
+        -ms-transform: rotateX(0deg) translateY(0px);
+        -o-transform: rotateX(0deg) translateY(0px);
+        transform: rotateX(0deg) translateY(0px);
+    }
+
+    50% {
+        -webkit-transform: rotateX(0deg) translateY(1px) translateX(5px);
+        -moz-transform: rotateX(0deg) translateY(10px) translateX(5px);
+        -ms-transform: rotateX(0deg) translateY(30px) translateX(5px);
+        -o-transform: rotateX(0deg) translateY(40px) translateX(5px);
+        transform: rotateX(0deg) translateY(10px) translateX(5px);
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        transform: rotateX(0deg) translateY(0px) translateX(1px);
+    }
+
+}
+
+.mdl {
+    height: auto;
+    width: 420px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+
+}
+
+h1 {
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    width: 420px;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.card {
+    height: 260px;
+    width: 420px;
+    border-radius: 20px;
+    background: #f09819;
+    backdrop-filter: blur(35px);
+    border: 2px solid rgba(254, 0, 0, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    padding: 30px 30px 30px 30px;
+    overflow: hidden;
+
+}
+
+.logo {
+    padding-bottom: 40px;
+    opacity: 0.9;
+}
+
+input[id="card-number"] {
+    font-size: 30px;
+    font-family: 'Space Mono', monospace;
+    width: 100%;
+    height: 50px;
+}
+
+input[id="card-number"]::placeholder {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Space Mono', monospace;
+}
+
+input::placeholder {
+    color: #ffffff;
+    font-family: 'Space Mono', monospace;
+}
+
+.group {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.card-number {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.card-number>input[id="card-number"] {
+    border: none;
+    margin-bottom: 0px;
+    outline: none;
+}
+
+.card-name>input[id="card-name"] {
+    border: none;
+    margin-bottom: 0px;
+    outline: none;
+}
+
+.card-exp>input[id="card-exp"] {
+    border: none;
+    margin-bottom: 0px;
+    outline: none;
+}
+
+.card-ccv>input[id="card-ccv"] {
+    border: none;
+    margin-bottom: 0px;
+    outline: none;
+}
+
+.underline {
+    transition: all 0.3s;
+    display: inline-block;
+    bottom: 0;
+    left: -100%;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+/*.submit{
+    position: relative;
+    bottom: -5px;
+    left: 10px;
+}*/
+/*Cüzdan Buton Tasarımı*/
+
+@media (hover: hover) {
+    #creditcard {
+        /*  set start position */
+        transform: translateY(110px);
+        transition: transform 0.1s ease-in-out;
+        /*  set transition for mouse enter & exit */
+    }
+
+    #money {
+        /*  set start position */
+        transform: translateY(180px);
+        transition: transform 0.1s ease-in-out;
+        /*  set transition for mouse enter & exit */
+    }
+
+    button:hover #creditcard {
+        transform: translateY(0px);
+        transition: transform 0.2s ease-in-out;
+        /*  overide transition for mouse enter */
+    }
+
+    button:hover #money {
+        transform: translateY(0px);
+        transition: transform 0.3s ease-in-out;
+        /*  overide transition for mouse enter */
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.25rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button:hover .button__text span {
+    transform: translateY(-0.25rem);
+    transition: transform .2s ease-in-out;
+}
+
+/* styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background-color: purple;
+    padding: 1rem 90px 1rem 2rem;
+    position: relative;
+    bottom: -147px;
+    left: 127px;
+    border-radius: 8px;
+    letter-spacing: 0.7px;
+    background-color: #f09819;
+    color: #fff;
+    font-size: 21px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button__svg {
+    position: absolute;
+    overflow: visible;
+    bottom: 6px;
+    right: 0.2rem;
+    height: 140%;
+}
+
+.card-number>input[id="card-number"]:hover+.underline {
+    left: 0;
+}
+
+.card-number>input[id="card-number"]:focus+.underline {
+    left: 0;
+}
+
+.card-name>input[id="card-name"]:hover+.underline {
+    left: 0;
+}
+
+.card-name>input[id="card-name"]:focus+.underline {
+    left: 0;
+}
+
+.expiration-date>input[id="card-exp"]:hover+.underline {
+    left: 0;
+}
+
+.expiration-date>input[id="card-exp"]:focus+.underline {
+    left: 0;
+}
+
+.ccv>input[id="card-ccv"]:hover+.underline {
+    left: 0;
+}
+
+.ccv>input[id="card-ccv"]:focus+.underline {
+    left: 0;
+}
+
+.card-name {
+    font-family: 'Space Mono', monospace;
+    padding: 0px 80px 0px 0px;
+    margin-right: 40px;
+    width: 100px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.expiration-date {
+    font-family: 'Space Mono', monospace;
+    padding: 0px 0px 0px 0px;
+    margin-right: 60px;
+    width: 80px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ccv {
+    font-family: 'Space Mono', monospace;
+    padding: 0px 0px 0px 0px;
+    margin-right: 0px;
+    width: 60px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+input {
+    font-family: 'Space Mono', monospace;
+    border: none;
+    font-size: 16px;
+    height: 26px;
+    color: #ffffff;
+    background: 0;
+    /*padding 0px;
+    width 0px;*/
+}
+
+input:focus {
+    border-bottom: 2px solid white;
+    outline: none;
+    font-family: 'Space Mono', monospace;
+    border: none;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    margin-bottom: -2px;
+}
+
+input:hover {
+    border-bottom: 2px solid white;
+    font-family: 'Space Mono', monospace;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 30px;
+}
+
+input[id="card-number"]:focus {
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 30px;
+    height: 50px;
+    margin-bottom: -2px;
+    width: 400px;
+}
+
+input[id="card-number"]:hover {
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 30px;
+    height: 50px;
+    margin-bottom: -2px;
+    width: 400px;
+}
+
+input[id="card-name"] {
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 160px;
+}
+
+input[id="card-name"]:hover {
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 160px;
+}
+
+input[id="card-name"]:focus {
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 160px;
+}
+
+input[id="card-exp"]:hover {
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 80px;
+}
+
+input[id="card-exp"]:focus {
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 80px;
+}
+
+input[id="card-ccv"]:hover {
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 50px;
+
+}
+
+input[id="card-ccv"]:focus {
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: -2px;
+    font-size: 16px;
+    height: 26px;
+    width: 50px;
+
+}
+
+label {
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'Space Mono', monospace;
+    pointer-events: none;
+    display: block;
+    padding-bottom: 2px;
+
+}
