@@ -21,7 +21,7 @@ body {
     color: #f09819;
 }
 
-/* Background circles start */
+/* Background başlangıcı */
 .circle {
     position: absolute;
     border-radius: 50%;
@@ -73,7 +73,7 @@ body {
     animation-direction: alternate;
 }
 
-/* Background circles end */
+/* Background bitişi */
 
 /* ANIMATIONS */
 @keyframes explode {
