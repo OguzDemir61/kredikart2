@@ -75,7 +75,7 @@ body {
 
 /* Background bitişi */
 
-/* ANIMATIONS */
+/* ANİMASYON */
 @keyframes explode {
     0% {
         opacity: 1;
@@ -235,26 +235,26 @@ input::placeholder {
         /*  set start position */
         transform: translateY(110px);
         transition: transform 0.1s ease-in-out;
-        /*  set transition for mouse enter & exit */
+        /*  mouse girişi ve çıkışı için geçişi ayarla */
     }
 
     #money {
         /*  set start position */
         transform: translateY(180px);
         transition: transform 0.1s ease-in-out;
-        /*  set transition for mouse enter & exit */
+        /*  mouse girişi ve çıkışı için geçişi ayarla*/
     }
 
     button:hover #creditcard {
         transform: translateY(0px);
         transition: transform 0.2s ease-in-out;
-        /*  overide transition for mouse enter */
+        /*  mouse girişi için geçişi geçersiz kıl */
     }
 
     button:hover #money {
         transform: translateY(0px);
         transition: transform 0.3s ease-in-out;
-        /*  overide transition for mouse enter */
+        /*  mouse girişi için geçişi geçersiz kıl */
     }
 }
 
@@ -277,7 +277,7 @@ input::placeholder {
     transition: transform .2s ease-in-out;
 }
 
-/* styling */
+/* stil */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 
