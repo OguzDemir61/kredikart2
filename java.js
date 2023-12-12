@@ -8,7 +8,7 @@ $("#card-number").on("keypress change blur", function () {
 
 $("#card-number").on("copy cut paste", function () {
   setTimeout(function () {
-    $("#card-number").trigger("change");
+      $("#card-number").trigger("change");
   });
 });
 
@@ -28,6 +28,6 @@ $("#card-exp").on("input", function () {
      if($(this).val().length == 2 && characterCount < $(this).val().length) {
         $(this).val($(this).val()+'/');
      }
-     characterCount = $(this).val().length });
+       characterCount = $(this).val().length });
  console.log("Oğuz DEMİR")
      
